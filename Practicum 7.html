@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Bridge - Responsive Grid Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #0d1b2a;
+            color: #e0e1dd;
+        }
+
+        /* Flexbox navigation bar (from Practicum 6) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #1b263b;
+            padding: 15px 40px;
+            border-bottom: 2px solid #00b4d8;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: #00b4d8;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #e0e1dd;
+            font-size: 16px;
+        }
+        .nav-links li a:hover {
+            color: #90e0ef;
+        }
+
+        /* Gallery section */
+        .gallery-heading {
+            text-align: center;
+            margin-top: 100px;
+            color: #00b4d8;
+        }
+        .gallery-heading p {
+            color: #e0e1dd;
+            font-size: 14px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px 40px 60px;
+        }
+
+        .gallery-item {
+            background-color: #1b263b;
+            border: 1px solid #00b4d8;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item p {
+            margin: 0;
+            padding: 10px;
+            font-size: 14px;
+            color: #90e0ef;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Block Bridge</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="https://aboutus.com">About Us</a></li>
+            <li><a href="https://ourwebsite.com">Our Website</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery-heading">
+        <h2>Block Bridge Gallery</h2>
+        <p>A responsive showcase of our blockchain infrastructure and network</p>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1/400/300" alt="Blockchain network diagram">
+            <p>Distributed Ledger</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/2/400/300" alt="Secure server room">
+            <p>Secure Node Infrastructure</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/3/400/300" alt="Encrypted data stream">
+            <p>Encrypted Transactions</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/4/400/300" alt="Smart contract code">
+            <p>Smart Contracts</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/5/400/300" alt="Digital wallet">
+            <p>Digital Wallets</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/6/400/300" alt="Global network map">
+            <p>Global Network</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/7/400/300" alt="Analytics dashboard">
+            <p>Transaction Analytics</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/8/400/300" alt="Team collaboration">
+            <p>Our Team</p>
+        </div>
+    </div>
+
+</body>
+</html>
